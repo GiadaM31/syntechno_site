@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynTechno - Cremona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="SynTechno Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#servizi" class="nav-link">Servizi</a></li>
+                <li><a href="#progetti" class="nav-link">Progetti</a></li>
+                <li><a href="#contatti" class="nav-link">Contatti</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Tecnologia al servizio delle tue esigenze</h1>
+            <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section id="chi-siamo" class="chi-siamo">
+        <div class="container">
+            <div class="chi-siamo-content">
+                <div class="chi-siamo-image">
+                    <div class="placeholder-icon">📊</div>
+                </div>
+                <div class="chi-siamo-text">
+                    <h2>Chi Siamo</h2>
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section id="servizi" class="servizi">
+        <div class="container">
+            <h2>Servizi</h2>
+            <div class="servizi-grid">
+                <div class="servizio-card">
+                    <div class="servizio-icon">⚙️</div>
+                    <h3>Servizio 1</h3>
+                    <p>Descrizione del primo servizio offerto da SynTechno</p>
+                </div>
+                <div class="servizio-card">
+                    <div class="servizio-icon">🔧</div>
+                    <h3>Servizio 2</h3>
+                    <p>Descrizione del secondo servizio offerto da SynTechno</p>
+                </div>
+                <div class="servizio-card">
+                    <div class="servizio-icon">💻</div>
+                    <h3>Servizio 3</h3>
+                    <p>Descrizione del terzo servizio offerto da SynTechno</p>
+                </div>
+                <div class="servizio-card">
+                    <div class="servizio-icon">📡</div>
+                    <h3>Servizio 4</h3>
+                    <p>Descrizione del quarto servizio offerto da SynTechno</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progetti Section -->
+    <section id="progetti" class="progetti">
+        <div class="container">
+            <h2>Progetti</h2>
+            <div class="progetti-grid">
+                <div class="progetto-card">
+                    <div class="progetto-image">
+                        <div class="placeholder-icon">🏢</div>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                </div>
+                <div class="progetto-card">
+                    <div class="progetto-image">
+                        <div class="placeholder-icon">🏭</div>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                </div>
+                <div class="progetto-card">
+                    <div class="progetto-image">
+                        <div class="placeholder-icon">🏗️</div>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti Section -->
+    <section id="contatti" class="contatti">
+        <div class="container">
+            <div class="contatti-content">
+                <div class="contatti-info">
+                    <h2>CONTATTI</h2>
+                    <div class="contatto-item">
+                        <h4>Sede</h4>
+                        <p>Numero telefono ufficio</p>
+                        <p>Numero telefono Stefano Mangiarotti</p>
+                        <p>Numero telefono Emira Jacini</p>
+                    </div>
+                </div>
+                <div class="contatti-form">
+                    <h3>Inviaci il tuo messaggio</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="messaggio" name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Accetto i termini della Privacy</label>
+                        </div>
+                        <button type="submit">INVIA</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>SynTechno</h2>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#cookie">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
