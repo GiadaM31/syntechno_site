@@ -419,13 +419,6 @@ body {
     color: #e60012;
 }
 
-.footer-credits {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #888;
-    text-align: center;
-    width: 100%;
-}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .hamburger {
