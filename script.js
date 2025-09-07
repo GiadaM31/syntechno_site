@@ -1,4 +1,4 @@
-// Mobile Navigation Toggle
+// Attiva/disattiva menu mobile
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -7,13 +7,13 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Chiusura del menu mobile quando si clicca su un link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links
+// Scroll fluido per i link di navigazione
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active navigation link highlighting
+// Evidenziazione del link attivo nella navbar
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
@@ -49,18 +49,18 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Contact form handling
+// Gestione del form di contatto
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
+    // Ottenere i dati del form
     const formData = new FormData(this);
     const nome = formData.get('nome');
     const email = formData.get('email');
     const messaggio = formData.get('messaggio');
     const privacy = formData.get('privacy');
     
-    // Basic validation
+    // Validazione di base
     if (!nome || !email || !messaggio) {
         alert('Per favore, compila tutti i campi obbligatori.');
         return;
@@ -71,19 +71,19 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         return;
     }
     
-    // Email validation
+    // Validazione email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert('Per favore, inserisci un indirizzo email valido.');
         return;
     }
     
-    // Simulate form submission (replace with actual form handling)
+    // Simulazione invio del form
     alert('Grazie per il tuo messaggio! Ti contatteremo presto.');
     this.reset();
     
-    // Here you would typically send the data to your server
-    // Example using fetch API:
+    // RIVEDERE QUESTA PARTE: Inviare i dati del form al server
+    // Esempio utilizzando l'API fetch:
     /*
     fetch('/contact-form', {
         method: 'POST',
@@ -101,7 +101,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     */
 });
 
-// Add interactive effects and animations
+// Aggiunta effetti e animazioni interattive
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -116,9 +116,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Initialize animations when DOM is loaded
+// Inizializzazione delle animazioni al caricamento della pagina
 document.addEventListener('DOMContentLoaded', function() {
-    // Observe service and project cards for animation
+    // Animazione delle card dei servizi e progetti
     document.querySelectorAll('.servizio-card, .progetto-card').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
-    // Add loading animation to hero section
+    // Animazione di apertura della sezione hero
     const heroContent = document.querySelector('.hero-content');
     heroContent.style.opacity = '0';
     heroContent.style.transform = 'translateY(30px)';
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 300);
 });
 
-// Add scroll-to-top functionality
+// Pulsante "Torna su"
 let scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = '↑';
 scrollToTopBtn.setAttribute('id', 'scrollToTop');
@@ -161,7 +161,7 @@ scrollToTopBtn.style.cssText = `
 
 document.body.appendChild(scrollToTopBtn);
 
-// Show/hide scroll to top button
+// Mostra/nascondi il pulsante in base allo scroll
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
         scrollToTopBtn.style.opacity = '1';
@@ -170,7 +170,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Scroll to top functionality
+// Funzionalità del pulsante "Torna su"
 scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
@@ -178,7 +178,7 @@ scrollToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Add hover effects to navigation links
+// Effetto hover sui link di navigazione
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-2px)';
@@ -190,33 +190,18 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Add typing effect function (optional - can be enabled)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Uncomment the following to enable typing effect on hero title
-/*
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-content h1');
-    const originalText = heroTitle.textContent;
-    typeWriter(heroTitle, originalText, 80);
-    
+// Effetto ingrandimento bottone CTA tramite JS
+document.querySelectorAll('.cta-button').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px) scale(1.05)';
+        this.style.transition = 'transform 0.2s';
+    });
+    btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'none';
+    });
 });
-*/
 
-// Form input animations
+// Animazione di input del form
 document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
     input.addEventListener('focus', function() {
         this.style.transform = 'scale(1.02)';
@@ -228,7 +213,7 @@ document.querySelectorAll('.form-group input, .form-group textarea').forEach(inp
     });
 });
 
-// Add parallax effect to hero section (subtle)
+// Effetto parallasse alla hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroImage = document.querySelector('.hero-image');
@@ -238,18 +223,18 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Console log for development
+// Log di sviluppo in console
 console.log('SynTechno website loaded successfully!');
 console.log('Developed for SynTechno - Cremona');
 
-// Error handling for missing elements
+// Gestione errori per elementi mancanti
 window.addEventListener('error', (e) => {
     console.error('JavaScript error:', e.error);
 });
 
-// Handle resize events
+// Gestione eventi di ridimensionamento finestra
 window.addEventListener('resize', () => {
-    // Close mobile menu on resize
+    // Chiudi il menu mobile al ridimensionamento
     if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
