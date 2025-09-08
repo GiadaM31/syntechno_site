@@ -1,3 +1,4 @@
+
 // Attiva/disattiva menu mobile
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -125,6 +126,21 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
+
+    // Effetto ingrandimento su hover per le card dei progetti
+    document.querySelectorAll('.progetto-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform += ' scale(1.07)';
+            card.style.zIndex = '2';
+            card.style.boxShadow = '0 8px 24px rgba(0,0,0,0.18)';
+        });
+        card.addEventListener('mouseleave', () => {
+            // Ripristina solo la parte scale, mantenendo eventuali translateY
+            card.style.transform = card.style.transform.replace(/scale\([^)]*\)/, '').trim();
+            card.style.zIndex = '';
+            card.style.boxShadow = '';
+        });
+    });
     
     // Animazione di apertura della sezione hero
     const heroContent = document.querySelector('.hero-content');
@@ -136,6 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
         heroContent.style.opacity = '1';
         heroContent.style.transform = 'translateY(0)';
     }, 300);
+});
+
+// Carosello dissolvenza sezione Chi Siamo
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.carousel-fade .carousel-img');
+    let current = 0;
+    if (images.length > 1) {
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 3000);
+    }
 });
 
 // Pulsante "Torna su"
