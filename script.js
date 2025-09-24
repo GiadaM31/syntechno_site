@@ -141,6 +141,21 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.boxShadow = '';
         });
     });
+
+        // Effetto ingrandimento su hover per le card dei servizi
+    document.querySelectorAll('.servizio-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform += ' scale(1.07)';
+            card.style.zIndex = '2';
+            card.style.boxShadow = '0 8px 24px rgba(255, 0, 0, 0.18)';
+        });
+        card.addEventListener('mouseleave', () => {
+            // Ripristina solo la parte scale, mantenendo eventuali translateY
+            card.style.transform = card.style.transform.replace(/scale\([^)]*\)/, '').trim();
+            card.style.zIndex = '';
+            card.style.boxShadow = '';
+        });
+    });
     
     // Animazione di apertura della sezione hero
     const heroContent = document.querySelector('.hero-content');

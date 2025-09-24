@@ -259,10 +259,6 @@ body {
     transition: transform 0.3s ease, opacity 0.6s ease;
 }
 
-.servizio-card:hover {
-    transform: translateY(-5px);
-}
-
 .servizio-icon {
     font-size: 48px;
     margin-bottom: 20px;
