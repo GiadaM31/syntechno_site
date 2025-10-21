@@ -50,7 +50,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Gestione del form di contatto
+/* // Gestione del form di contatto
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
