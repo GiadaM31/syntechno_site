@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('mouseenter', () => {
             card.style.transform += ' scale(1.07)';
             card.style.zIndex = '2';
-            card.style.boxShadow = '0 8px 24px rgba(255, 0, 0, 0.18)';
+            card.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.18)';
         });
         card.addEventListener('mouseleave', () => {
             // Ripristina solo la parte scale, mantenendo eventuali translateY
