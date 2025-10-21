@@ -1,5 +1,3 @@
-
-
 /* Reset e base styles */
 img {
     max-width: 100%;
@@ -318,6 +316,17 @@ body {
     text-align: center;
 }
 
+/* Link telefono in contatti */
+.telefono-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.telefono-link:hover, .telefono-link:focus {
+    text-decoration: underline;
+    color: #fff;
+}
 /* Contatti Section */
 .contatti {
     background-color: #e60012;
