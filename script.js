@@ -100,7 +100,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         console.error('Error:', error);
     });
     */
-});
+   
 
 // Aggiunta effetti e animazioni interattive
 const observerOptions = {
